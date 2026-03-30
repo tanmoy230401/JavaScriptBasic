@@ -18,16 +18,16 @@
 
 
 
-// function getData(dataId)
-// {
-//     return new Promise((resolve, reject) => {
-//         setTimeout(() => {
-//             console.log(`Data ${dataId} Received`);
-//             resolve("Success");
-//         }, 2000);
-//     }); 
+function getData(dataId)
+{
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log(`Data ${dataId} Received`);
+            resolve("Success");
+        }, 2000);
+    }); 
 
-// }
+}
 // Async function to get all data
 
 // async function getAllData()
@@ -37,6 +37,16 @@
 //     await getData(2);
 //     await getData(3);
 // }
+
+
+// using IIFE to call async function
+(async function (){
+    console.log("Getting All Data...");
+    await getData(1);
+    await getData(2);
+    await getData(3);
+})();
+
 
 
 
